@@ -10,5 +10,7 @@ jobs:
         uses: wadhwa0801/hello-world-composite-action@v1
         with:
           who-to-greet: 'Mona the Octocat'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
       - run: echo random-number ${{ steps.foo.outputs.random-number }}
         shell: bash
